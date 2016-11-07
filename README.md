@@ -10,37 +10,37 @@ $ chmod +x setup.sh && ./setup.sh
 
 ## Endpoints
 
-### @apis.route('/')
+### Route: /
 Publicly accessible.
 
 ```$ curl http://127.0.0.1:5000```
 
-### @apis.route('/tasks', methods=['GET'])
+### Route: /tasks (GET)
 Display the list of tasks.
 
 ```$ curl --user admin:admin http://127.0.0.1:5000/tasks```
 
-### @apis.route('/tasks', methods=['DELETE'])
+### Route: /tasks (DELETE)
 Delete all the stored tasks.
 
 ```$ curl -X "DELETE" --user admin:admin http://127.0.0.1:5000/tasks```
 
-### @apis.route('/tasks', methods=['POST'])
+### Route: /tasks (POST)
 Add a new task.
 
 ```$ curl -X "POST" --user admin:admin -H "title:title" -H "description:description" -H "done:0"  http://127.0.0.1:5000/tasks```
 
-### @apis.route('/task/<int:id>', methods=['GET'])
+### Route: /task/<int:id> (GET)
 Display a task give the ID.
 
 ```$ curl --user admin:admin http://127.0.0.1:5000/task/1```
 
-### @apis.route('/task/<int:id>', methods=['DELETE'])
+### Route: /task/<int:id> (DELETE)
 Delete a task given the ID.
 
 ```$ curl -X "DELETE" --user admin:admin http://127.0.0.1:5000/task/1```
 
-### @apis.route('/task/<int:id>', methods=['POST'])
+### Route: /task/<int:id> (POST)
 Update a task given the ID.
 
 ```$ curl -X "POST" --user admin:admin -H "done:1"  http://127.0.0.1:5000/task/1```
