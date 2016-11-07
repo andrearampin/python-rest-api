@@ -27,6 +27,7 @@ Delete all the stored tasks.
 
 ### @apis.route('/tasks', methods=['POST'])
 Add a new task.
+
 ```$ curl -X "POST" --user admin:admin -H "title:title" -H "description:description" -H "done:0"  http://127.0.0.1:5000/tasks```
 
 ### @apis.route('/task/<int:id>', methods=['GET'])
