@@ -30,17 +30,17 @@ Add a new task.
 
 ```$ curl -X "POST" --user admin:admin -H "title:title" -H "description:description" -H "done:0"  http://127.0.0.1:5000/tasks```
 
-### /task/<int:id> (GET)
+### /task/*id* (GET)
 Display a task give the ID.
 
 ```$ curl --user admin:admin http://127.0.0.1:5000/task/1```
 
-### /task/<int:id> (DELETE)
+### /task/*id* (DELETE)
 Delete a task given the ID.
 
 ```$ curl -X "DELETE" --user admin:admin http://127.0.0.1:5000/task/1```
 
-### /task/<int:id> (POST)
+### /task/*id* (POST)
 Update a task given the ID.
 
 ```$ curl -X "POST" --user admin:admin -H "done:1"  http://127.0.0.1:5000/task/1```
